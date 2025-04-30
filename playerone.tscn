@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcbtj0xlnibpj"]
+
+[ext_resource type="Script" uid="uid://bw5be47y40tvb" path="res://script/playerone.gd" id="1_0ruh5"]
+[ext_resource type="Texture2D" uid="uid://dr0adtkkfxemh" path="res://assets/Tiles/tile_0096.png" id="1_qgd0c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qaws4"]
+radius = 6.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_0ruh5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qgd0c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qaws4")

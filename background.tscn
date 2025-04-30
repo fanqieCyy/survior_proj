@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyeo6l8jwce6e"]
+
+[ext_resource type="PackedScene" uid="uid://dcbtj0xlnibpj" path="res://playerone.tscn" id="1_i7s6n"]
+[ext_resource type="Texture2D" uid="uid://d2ftc7lerbomw" path="res://assets/myself/S-0004BackGround.png" id="2_xehqc"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_i7s6n")]
+position = Vector2(61, 46)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+texture_filter = 1
+position = Vector2(-5, 3)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_offset = Vector2(-71, 6)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D"]
+
+[node name="S-0004BackGround" type="Sprite2D" parent="Parallax2D/ParallaxLayer"]
+z_index = -1
+position = Vector2(62, 49)
+texture = ExtResource("2_xehqc")
