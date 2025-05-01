@@ -4,13 +4,13 @@ class_name  PlayerRun
 
 @onready var state_machine = get_parent()
 
-func Enter(): #进入该状态如何处理
+func Enter_state(): #进入该状态如何处理
 	pass
 	
-func Exit(): #退出该状态如何处理
+func Exit_state(): #退出该状态如何处理
 	pass
 	
-func Update(delta): #判断何时需要改变状态
+func Update_state(delta): #判断何时需要改变状态
 	pass
 	
 func Tick_physics(delta):

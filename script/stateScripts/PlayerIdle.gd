@@ -3,13 +3,13 @@ class_name  PlayerIdle
 #状态模板函数
 @onready var player: CharacterBody2D = $"../.."
 
-func Enter(): #进入该状态如何处理
+func Enter_state(): #进入该状态如何处理
 	pass
 	
-func Exit(): #退出该状态如何处理
+func Exit_state(): #退出该状态如何处理
 	pass
 	
-func Update(delta): #判断何时需要改变状态
+func Update_state(delta): #判断何时需要改变状态
 	if(player.velocity.x > 0):
 		Transition_state("run")
 	
