@@ -1,0 +1,248 @@
+[gd_scene load_steps=15 format=3 uid="uid://csau31fqwunum"]
+
+[ext_resource type="Script" uid="uid://bt6e8j1vbnoka" path="res://script/main_menu.gd" id="1_i26rj"]
+[ext_resource type="FontFile" uid="uid://bgdl3ssg1c12f" path="res://assets/Font/Silver.ttf" id="2_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://du0ev5aaf8bmq" path="res://assets/ui_zt/Base-01.png" id="3_h7a2f"]
+
+[sub_resource type="Theme" id="Theme_eiy7p"]
+
+[sub_resource type="Theme" id="Theme_h7a2f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eiy7p"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qoqlk"]
+texture = ExtResource("3_h7a2f")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 3.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(94, 14, 21, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7a2f"]
+bg_color = Color(0.573161, 0.603482, 0.644588, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_color = Color(0.176979, 0.148575, 0.203706, 0.6)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwfq2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7r1g0"]
+
+[sub_resource type="FontFile" id="FontFile_h7a2f"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/5/0/ascent = 0.0
+cache/0/5/0/descent = 0.0
+cache/0/5/0/underline_position = 0.0
+cache/0/5/0/underline_thickness = 0.0
+cache/0/5/0/scale = 1.0
+cache/0/515/0/ascent = 0.0
+cache/0/515/0/descent = 0.0
+cache/0/515/0/underline_position = 0.0
+cache/0/515/0/underline_thickness = 0.0
+cache/0/515/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_qoqlk"]
+default_font = SubResource("FontFile_h7a2f")
+Button/colors/font_color = Color(0.869668, 0.880548, 0.85014, 1)
+Button/colors/font_disabled_color = Color(0.589759, 0, 0.0866209, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0.687496, 0.653934, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 5
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 2
+Button/font_sizes/font_size = 70
+Button/fonts/font = ExtResource("2_eiy7p")
+Button/icons/icon = null
+Button/styles/disabled = SubResource("StyleBoxEmpty_eiy7p")
+Button/styles/focus = SubResource("StyleBoxTexture_qoqlk")
+Button/styles/hover = SubResource("StyleBoxFlat_h7a2f")
+Button/styles/normal = SubResource("StyleBoxEmpty_iwfq2")
+Button/styles/pressed = SubResource("StyleBoxEmpty_7r1g0")
+VBoxContainer/constants/separation = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qie43"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_61cf8"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_i26rj")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 524.0
+offset_top = 215.0
+offset_right = 1689.0
+offset_bottom = 382.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = SubResource("Theme_eiy7p")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eiy7p")
+theme_override_font_sizes/font_size = 150
+text = "雨哥大战B瘟疫!"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 589.0
+offset_top = 508.0
+offset_right = 1688.0
+offset_bottom = 675.0
+grow_horizontal = 2
+rotation = -0.214676
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = SubResource("Theme_eiy7p")
+theme_override_colors/font_color = Color(0.607843, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eiy7p")
+theme_override_font_sizes/font_size = 100
+text = "Rainbro pk. Bwanyi"
+horizontal_alignment = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 160.0
+offset_right = 2096.0
+offset_bottom = 1051.0
+size_flags_horizontal = 4
+theme = SubResource("Theme_h7a2f")
+metadata/_edit_lock_ = true
+
+[node name="MainMenu" type="VBoxContainer" parent="CenterContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_qoqlk")
+theme_override_constants/separation = 10
+
+[node name="play" type="Button" parent="CenterContainer/MainMenu"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "新游戏"
+icon = SubResource("ViewportTexture_qie43")
+
+[node name="continue" type="Button" parent="CenterContainer/MainMenu"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "继续游戏"
+icon = SubResource("ViewportTexture_qie43")
+
+[node name="setting" type="Button" parent="CenterContainer/MainMenu"]
+layout_mode = 2
+text = "设置"
+
+[node name="credits" type="Button" parent="CenterContainer/MainMenu"]
+layout_mode = 2
+theme_override_icons/icon = SubResource("ViewportTexture_61cf8")
+text = "制作"
+
+[node name="QUIT" type="Button" parent="CenterContainer/MainMenu"]
+layout_mode = 2
+text = "退出"
+
+[node name="SETTING" type="VBoxContainer" parent="CenterContainer"]
+visible = false
+layout_mode = 2
+
+[node name="BACK" type="Button" parent="CenterContainer/SETTING"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+
+[node name="CREDITS" type="VBoxContainer" parent="CenterContainer"]
+visible = false
+layout_mode = 2
+
+[node name="BACK" type="Button" parent="CenterContainer/CREDITS"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+
+[node name="game_maker" type="Label" parent="CenterContainer/CREDITS"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "cyy
+huaziqi
+weixu
+tanjiang"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+position = Vector2(964, 489)
+
+[connection signal="pressed" from="CenterContainer/MainMenu/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/MainMenu/continue" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/MainMenu/setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="CenterContainer/MainMenu/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CenterContainer/MainMenu/QUIT" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CenterContainer/SETTING/BACK" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CenterContainer/CREDITS/BACK" to="." method="_on_back_pressed"]
