@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dteyc6hywq4g7"]
+
+[ext_resource type="Script" uid="uid://cr81m3w6o2k3i" path="res://script/game_underscore_camera.gd" id="1_n72s3"]
+
+[node name="Camera2D" type="Camera2D"]
+script = ExtResource("1_n72s3")
