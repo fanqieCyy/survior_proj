@@ -1,0 +1,165 @@
+[gd_scene load_steps=11 format=3 uid="uid://dtqdbccc0117p"]
+
+[ext_resource type="FontFile" uid="uid://bgdl3ssg1c12f" path="res://assets/Font/Silver.ttf" id="1_kect4"]
+[ext_resource type="Texture2D" uid="uid://du0ev5aaf8bmq" path="res://assets/ui_zt/Base-01.png" id="1_xu4x4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qfdlc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xu4x4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_522al"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dk0dx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hkjms"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c5kq6"]
+content_margin_left = 8.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("1_xu4x4")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(65, 273, 14, 14)
+
+[sub_resource type="Theme" id="Theme_l25xu"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("1_kect4")
+Button/styles/disabled = SubResource("StyleBoxEmpty_qfdlc")
+Button/styles/focus = SubResource("StyleBoxEmpty_xu4x4")
+Button/styles/hover = SubResource("StyleBoxEmpty_522al")
+Button/styles/normal = SubResource("StyleBoxEmpty_dk0dx")
+Button/styles/pressed = SubResource("StyleBoxFlat_hkjms")
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.729412)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_c5kq6")
+
+[sub_resource type="Theme" id="Theme_hj4v2"]
+
+[node name="PauseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_l25xu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 213.0
+offset_right = 966.0
+offset_bottom = 597.0
+color = Color(0.176471, 0.14902, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kect4")
+text = "暂停	"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioSetting" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Grid" type="GridContainer" parent="VBoxContainer/AudioSetting"]
+layout_mode = 2
+theme = SubResource("Theme_hj4v2")
+columns = 2
+
+[node name="main" type="Label" parent="VBoxContainer/AudioSetting/Grid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kect4")
+text = "主音量"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/AudioSetting/Grid"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+min_value = 128.0
+max_value = 128.0
+value = 128.0
+
+[node name="bgm" type="Label" parent="VBoxContainer/AudioSetting/Grid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kect4")
+text = "音乐"
+
+[node name="HSlider2" type="HSlider" parent="VBoxContainer/AudioSetting/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 100.0
+value = 100.0
+
+[node name="sfx" type="Label" parent="VBoxContainer/AudioSetting/Grid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kect4")
+text = "音效"
+
+[node name="HSlider3" type="HSlider" parent="VBoxContainer/AudioSetting/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 100.0
+value = 100.0
+
+[node name="Actions" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Actions"]
+layout_mode = 2
+
+[node name="quit" type="Button" parent="VBoxContainer/Actions/HBoxContainer"]
+layout_mode = 2
+text = "退出游戏"
+
+[node name="resume" type="Button" parent="VBoxContainer/Actions/HBoxContainer"]
+layout_mode = 2
+text = "继续游戏"

@@ -11,14 +11,18 @@ config_version=5
 [application]
 
 config/name="survivorLike"
-run/main_scene="uid://dyeo6l8jwce6e"
+run/main_scene="uid://csau31fqwunum"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=648
+window/size/viewport_width=1440
+window/size/viewport_height=810
+window/size/initial_position_type=0
+window/size/initial_position=Vector2i(450, 100)
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [input]
 
