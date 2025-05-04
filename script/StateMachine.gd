@@ -2,6 +2,7 @@ extends Node
 class_name StateMachine
 
 @export var initial_state :State #外部导入初始状态
+
 var current_state : State #当前状态
 var state_dir :Dictionary = {}  #创建状态节点字典
 
@@ -11,11 +12,11 @@ func _ready() -> void:
 			state_dir[child.name.to_lower()] = child
 	if initial_state: #设置初始状态
 		current_state = initial_state
-		initial_state.Enter()
+		initial_state.Enter_state()
 	
 func _process(delta: float) -> void:
 	if(current_state):
-		current_state.Update(delta) #更新节点状态
+		current_state.Update_state(delta) #更新节点状态
 
 func _physics_process(delta: float) -> void:
 	if(current_state):
@@ -27,7 +28,6 @@ func Switch_state(last_state : State, next_state_name): #这里的newState是字
 	var next_state : State = state_dir.get(next_state_name.to_lower()) #获取下一个节点
 	if !next_state: #如果没有找到
 		return
-	last_state.Exit()
-	next_state.Enter()
-	
+	last_state.Exit_state()
+	next_state.Enter_state()
 	current_state = next_state

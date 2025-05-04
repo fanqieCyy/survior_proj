@@ -1,7 +1,8 @@
 extends State
 class_name  PlayerIdle
 #状态模板函数
-@onready var player: CharacterBody2D = $"../.."
+
+@onready var player: Player = $"../.."
 
 func Enter_state(): #进入该状态如何处理
 	pass
@@ -10,11 +11,12 @@ func Exit_state(): #退出该状态如何处理
 	pass
 	
 func Update_state(delta): #判断何时需要改变状态
-	if(player.velocity.x > 0):
+	if(Input.is_action_just_pressed("move_up") || Input.is_action_just_pressed("move_left") || Input.is_action_just_pressed("move_right") || Input.is_action_just_pressed("move_down")):
 		Transition_state("run")
 	
 func Tick_physics(delta):
 	pass
 
 func Transition_state(next_state):  #更改状态 /或者用发送信号实现，可以不需要这个函数？/先用着吧
+	print(1)
 	state_machine.Switch_state(self, next_state)

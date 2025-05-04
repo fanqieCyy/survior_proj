@@ -6,21 +6,16 @@ func _ready() -> void:
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://background.tscn")
 
-
 func _on_setting_pressed() -> void:
 	$CenterContainer/MainMenu.visible=false
 	$CenterContainer/SETTING.visible=true
-	
-
 
 func _on_credits_pressed() -> void:
 	$CenterContainer/CREDITS.visible=true
 	$CenterContainer/MainMenu.visible=false
 
-
 func _on_quit_pressed() -> void:
 	get_tree().quit()
-
 
 func _on_back_pressed() -> void:
 	$CenterContainer/SETTING.visible=false
