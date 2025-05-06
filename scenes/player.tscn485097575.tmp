@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cqtqieb5vh5hn" path="res://script/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bx38pi1fhklvm" path="res://assets/Tilemap/tilemap.png" id="2_qhqgy"]
 [ext_resource type="Script" uid="uid://blevcndlloabn" path="res://script/stateScripts/state_machine.gd" id="3_qhqgy"]
-[ext_resource type="Script" uid="uid://dcgkcw7jtw2p7" path="res://script/stateScripts/player_idle.gd" id="4_dqkch"]
-[ext_resource type="Script" uid="uid://cd3uylk74gts1" path="res://script/stateScripts/player_run.gd" id="5_qlg0r"]
+[ext_resource type="Script" uid="uid://dcgkcw7jtw2p7" path="res://script/stateScripts/PlayerIdle.gd" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://cd3uylk74gts1" path="res://scenes/PlayerRun.gd" id="5_qlg0r"]
 [ext_resource type="Script" uid="uid://cfa4mk5txy3f8" path="res://script/player_attack_manager.gd" id="6_tuyoq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
