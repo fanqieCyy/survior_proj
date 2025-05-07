@@ -2,6 +2,8 @@ extends ShootWeapon
 class_name fly_cutter
 
 func _ready() -> void:
-	print(2)
 	super._ready()
-	print("real")
+
+
+func _on_attack_shape_area_entered(area: Area2D) -> void:
+	pass

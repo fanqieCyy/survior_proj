@@ -3,16 +3,12 @@ extends Camera2D
 
 var Target_position=Vector2.ZERO#这个变量是指向(0,0)向量的意思么
 
-  
 func _ready():
 	make_current()
-	
-	
 	
 func _process(delta):
 	Aquire_target()
 	global_position=global_position.lerp(Target_position,1.0-exp(-delta*10))#指数函数让相机跟随丝滑些
-	
 	
 func Aquire_target():
 	var player_nodes= get_tree().get_nodes_in_group("player")	 #获取该分组的信息

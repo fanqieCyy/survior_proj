@@ -11,9 +11,9 @@ func exit_state(): #退出该状态如何处理
 	pass
 	
 func update_state(delta): #判断何时需要改变状态
-	if(Input.is_action_just_pressed("move_up") || Input.is_action_just_pressed("move_left") || Input.is_action_just_pressed("move_right") || Input.is_action_just_pressed("move_down")):
+	if(Input.get_vector("move_left", "move_right", "move_up", "move_down").length() > 0):
 		transition_state("run")
-	
+
 func tick_physics(delta):
 	pass
 

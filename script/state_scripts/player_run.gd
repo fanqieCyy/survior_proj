@@ -6,7 +6,7 @@ class_name  PlayerRun
 
 func enter_state(): #进入该状态如何处理
 	pass
-	
+
 func exit_state(): #退出该状态如何处理
 	pass
 	
@@ -14,6 +14,7 @@ func update_state(delta): #判断何时需要改变状态
 	var input_vector = Input.get_vector("move_left", "move_right", "move_up", "move_down") #get_vector可以实现360度方向获取
 	if input_vector.length() > 0:
 		player.direction = input_vector
+		player.last_direction = input_vector
 	else:
 		player.direction = Vector2.ZERO
 		transition_state("idle")

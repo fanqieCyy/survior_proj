@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://ualgspsle8fk"]
+
+[ext_resource type="Script" uid="uid://6ybpw5cl8611" path="res://script/envir_collision_base.gd" id="1_leao3"]
+[ext_resource type="Script" uid="uid://sqnm7sy61s1q" path="res://scenes/envir_collision_base_area.gd" id="1_vfd7v"]
+[ext_resource type="Texture2D" uid="uid://bx38pi1fhklvm" path="res://assets/Tilemap/tilemap.png" id="1_wsc8o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsc8o"]
+size = Vector2(14, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfd7v"]
+size = Vector2(14, 16)
+
+[node name="EnvirCollision" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_leao3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wsc8o")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("1_vfd7v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_vfd7v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wsc8o")
+region_enabled = true
+region_rect = Rect2(170, 102, 16, 16)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

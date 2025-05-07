@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dyeo6l8jwce6e"]
+[gd_scene load_steps=8 format=3 uid="uid://dyeo6l8jwce6e"]
 
 [ext_resource type="PackedScene" uid="uid://fjegd8gqa3s8" path="res://scenes/player.tscn" id="1_i7s6n"]
 [ext_resource type="PackedScene" uid="uid://dteyc6hywq4g7" path="res://Game_underscore_camera.tscn" id="1_splo0"]
 [ext_resource type="Texture2D" uid="uid://d2ftc7lerbomw" path="res://assets/myself/S-0004BackGround.png" id="2_xehqc"]
 [ext_resource type="Texture2D" uid="uid://dov7bwdy5ylar" path="res://assets/Tilemap/tilemap_packed.png" id="3_xehqc"]
+[ext_resource type="PackedScene" uid="uid://ualgspsle8fk" path="res://scenes/envir_collision_base.tscn" id="5_eq6nc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_splo0"]
 texture = ExtResource("3_xehqc")
@@ -81,3 +82,5 @@ scroll_offset = Vector2(31, 107)
 z_index = -1
 position = Vector2(288, 151)
 texture = ExtResource("2_xehqc")
+
+[node name="EnvirCollision" parent="." instance=ExtResource("5_eq6nc")]

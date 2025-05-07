@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dbpvnsyvu5aed"]
 
 [ext_resource type="PackedScene" uid="uid://c5w5wvp8pwjvf" path="res://scenes/weapons/templates/shoot_weapon.tscn" id="1_am8mh"]
-[ext_resource type="Script" uid="uid://dlr0o32e4poqo" path="res://script/weaponScripts/fly_cutter.gd" id="2_duq52"]
+[ext_resource type="Script" uid="uid://dlr0o32e4poqo" path="res://script/weapon_scripts/fly_cutter.gd" id="2_duq52"]
 
 [node name="FlyCutter" instance=ExtResource("1_am8mh")]
 script = ExtResource("2_duq52")
+
+[connection signal="area_entered" from="AttackShape" to="." method="_on_attack_shape_area_entered"]

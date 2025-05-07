@@ -1,16 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://fjegd8gqa3s8"]
+[gd_scene load_steps=10 format=3 uid="uid://fjegd8gqa3s8"]
 
 [ext_resource type="Script" uid="uid://cqtqieb5vh5hn" path="res://script/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bx38pi1fhklvm" path="res://assets/Tilemap/tilemap.png" id="2_qhqgy"]
-[ext_resource type="Script" uid="uid://blevcndlloabn" path="res://script/stateScripts/state_machine.gd" id="3_qhqgy"]
-[ext_resource type="Script" uid="uid://dcgkcw7jtw2p7" path="res://script/stateScripts/player_idle.gd" id="4_dqkch"]
-[ext_resource type="Script" uid="uid://cd3uylk74gts1" path="res://script/stateScripts/player_run.gd" id="5_qlg0r"]
+[ext_resource type="Script" uid="uid://blevcndlloabn" path="res://script/state_scripts/state_machine.gd" id="3_qhqgy"]
+[ext_resource type="Script" uid="uid://dcgkcw7jtw2p7" path="res://script/state_scripts/player_idle.gd" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://cd3uylk74gts1" path="res://script/state_scripts/player_run.gd" id="5_qlg0r"]
 [ext_resource type="Script" uid="uid://cfa4mk5txy3f8" path="res://script/player_attack_manager.gd" id="6_tuyoq"]
+[ext_resource type="Script" uid="uid://2s8hjqqo4pqm" path="res://script/player_scripts/player_interact_area.gd" id="7_fjrip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(16, 15)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
+size = Vector2(16, 15)
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 2
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -35,3 +40,11 @@ script = ExtResource("5_qlg0r")
 
 [node name="attackManger" type="Node" parent="."]
 script = ExtResource("6_tuyoq")
+
+[node name="interactArea" type="Area2D" parent="."]
+collision_mask = 6
+script = ExtResource("7_fjrip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactArea"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_tuyoq")

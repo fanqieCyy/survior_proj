@@ -1,12 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5w5wvp8pwjvf"]
+[gd_scene load_steps=6 format=3 uid="uid://c5w5wvp8pwjvf"]
 
-[ext_resource type="Script" uid="uid://c81kkkak3x53q" path="res://script/weaponScripts/shoot_weapon.gd" id="1_v57y8"]
+[ext_resource type="Script" uid="uid://c81kkkak3x53q" path="res://script/weapon_scripts/shoot_weapon.gd" id="1_v57y8"]
 [ext_resource type="Texture2D" uid="uid://bx38pi1fhklvm" path="res://assets/Tilemap/tilemap.png" id="2_b0mj0"]
+[ext_resource type="Script" uid="uid://cqpcts48j3vgs" path="res://script/weapon_scripts/shoot_weapon_area.gd" id="3_b0mj0"]
 
-[node name="ShootWeapon" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0mj0"]
+size = Vector2(8, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v57y8"]
+size = Vector2(8, 13)
+
+[node name="ShootWeapon" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 0
 script = ExtResource("1_v57y8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_b0mj0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_b0mj0")
 region_enabled = true
 region_rect = Rect2(119, 136, 16, 16)
+
+[node name="AttackShape" type="Area2D" parent="." groups=["bullet"]]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("3_b0mj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackShape"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_v57y8")
