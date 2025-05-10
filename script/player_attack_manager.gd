@@ -17,6 +17,7 @@ func on_timer_timeout(timerName : String):
 	timerName = timerName.to_lower()
 	if(timerName == "shoottimer"):
 		var fly_cutter = FLY_CUTTER.instantiate()
+		fly_cutter.player = player
 		fly_cutter.position = player.position
 		fly_cutter.set_direction(player.last_direction)
 		get_tree().current_scene.add_child.call_deferred(fly_cutter)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkr5x06ej2ub7"]
+
+[ext_resource type="Script" uid="uid://d0i55f285d8cv" path="res://script/props/dropper.gd" id="1_y3qni"]
+[ext_resource type="Texture2D" uid="uid://bx38pi1fhklvm" path="res://assets/Tilemap/tilemap.png" id="2_jfato"]
+
+[node name="Dropper" type="Node2D"]
+script = ExtResource("1_y3qni")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jfato")
+region_enabled = true
+region_rect = Rect2(119, 153, 16, 16)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(3, -6, -3, -6, -5, 0, -5, 5, -3, 7, 3, 7, 5, 5, 5, 0)

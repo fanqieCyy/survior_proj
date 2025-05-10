@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ualgspsle8fk"]
 
 [ext_resource type="Script" uid="uid://6ybpw5cl8611" path="res://script/envir_collision_base.gd" id="1_leao3"]
-[ext_resource type="Script" uid="uid://sqnm7sy61s1q" path="res://scenes/envir_collision_base_area.gd" id="1_vfd7v"]
+[ext_resource type="Script" uid="uid://sqnm7sy61s1q" path="res://script/envir_collision_base_area.gd" id="1_vfd7v"]
 [ext_resource type="Texture2D" uid="uid://bx38pi1fhklvm" path="res://assets/Tilemap/tilemap.png" id="1_wsc8o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsc8o"]

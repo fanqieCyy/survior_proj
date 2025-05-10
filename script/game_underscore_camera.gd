@@ -4,6 +4,7 @@ extends Camera2D
 var Target_position=Vector2.ZERO#这个变量是指向(0,0)向量的意思么
 
 func _ready():
+	self.zoom = Vector2(2.5, 2.5)
 	make_current()
 	
 func _process(delta):

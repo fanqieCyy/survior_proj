@@ -24,6 +24,10 @@ window/size/initial_position=Vector2i(450, 100)
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gamedev_assistant/plugin.cfg")
+
 [global_group]
 
 bullet=""
@@ -57,6 +61,7 @@ move_down={
 2d_physics/layer_2="environment"
 2d_physics/layer_3="enemy"
 2d_physics/layer_4="bullet"
+2d_physics/layer_5="prop"
 
 [rendering]
 
