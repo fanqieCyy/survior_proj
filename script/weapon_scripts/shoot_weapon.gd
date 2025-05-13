@@ -14,7 +14,7 @@ func set_direction(dir : Vector2) -> void:
 
 func _physics_process(delta: float) -> void:
 	position += delta * direction * shoot_speed
-	if(player.position.distance_to(self.position) > 1500):
-		print("freed")
+	if(player.position.distance_to(self.position) > 1500): #当武器距离玩家足够远
+		#print("freed")
 		queue_free()
 	

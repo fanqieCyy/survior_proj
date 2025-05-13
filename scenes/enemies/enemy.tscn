@@ -9,9 +9,13 @@ size = Vector2(17, 12)
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 7
+motion_mode = 1
+safe_margin = 0.2
 script = ExtResource("1_8e3ao")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.25, 0)
+scale = Vector2(1.02941, 1)
 texture = ExtResource("2_38ino")
 region_enabled = true
 region_rect = Rect2(0, 170, 17, 16)

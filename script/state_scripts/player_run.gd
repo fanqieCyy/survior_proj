@@ -25,6 +25,12 @@ func tick_physics(delta):
 		acceleration = 20000
 	player.velocity = player.velocity.move_toward(player.direction * player.MAXSPEED,  acceleration * delta)
 	player.move_and_slide()
-
+	for i in player.get_slide_collision_count():
+		var collision = player.get_slide_collision(i)
+		var enemy = collision.get_collider()
+		if enemy.is_in_group("enemy") and enemy.has_method("knock_back"):
+			var dir = collision.get_normal()
+			enemy.knock_back(- dir * player.push_force)
+			
 func transition_state(next_state):  #更改状态 /或者用发送信号实现，可以不需要这个函数？/先用着吧
 	pass
