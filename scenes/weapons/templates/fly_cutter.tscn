@@ -5,5 +5,3 @@
 
 [node name="FlyCutter" instance=ExtResource("1_am8mh")]
 script = ExtResource("2_duq52")
-
-[connection signal="area_entered" from="AttackShape" to="." method="_on_attack_shape_area_entered"]

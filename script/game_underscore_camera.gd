@@ -1,5 +1,5 @@
 extends Camera2D
-
+class_name camera
 
 var Target_position=Vector2.ZERO#这个变量是指向(0,0)向量的意思么
 

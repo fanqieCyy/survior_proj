@@ -1,4 +1,5 @@
 extends Node
+class_name EnemyGenerator
 
 var scene_list : Dictionary = {}
 var enemy_num_list : Dictionary = {}
