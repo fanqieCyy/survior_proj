@@ -48,3 +48,5 @@ script = ExtResource("7_fjrip")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactArea"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_tuyoq")
+
+[connection signal="area_entered" from="interactArea" to="." method="_on_interact_area_area_entered"]

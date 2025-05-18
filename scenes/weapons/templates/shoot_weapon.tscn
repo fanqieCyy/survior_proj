@@ -26,9 +26,11 @@ region_rect = Rect2(119, 136, 16, 16)
 
 [node name="AttackShape" type="Area2D" parent="." groups=["bullet"]]
 collision_layer = 8
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("3_b0mj0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackShape"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_v57y8")
+
+[connection signal="area_entered" from="AttackShape" to="." method="_on_attack_shape_area_entered"]
