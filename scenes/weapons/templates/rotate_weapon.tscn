@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3w32022wveb8"]
+
+[ext_resource type="Texture2D" uid="uid://bx38pi1fhklvm" path="res://assets/Tilemap/tilemap.png" id="1_8ggwl"]
+[ext_resource type="Script" uid="uid://vdn1atdkvmgw" path="res://script/weapon_scripts/rotate_weapon.gd" id="1_ie585"]
+[ext_resource type="Script" uid="uid://c1ah2wp3sac3y" path="res://script/weapon_scripts/rotate_weapon_area.gd" id="3_ccd7q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ie585"]
+size = Vector2(16, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sf7ju"]
+size = Vector2(20, 19)
+
+[node name="rotate_weapon" type="StaticBody2D" groups=["weapon"]]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_ie585")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ie585")
+
+[node name="weapon_0" type="Node2D" parent="." groups=["weapon"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="weapon_0"]
+texture = ExtResource("1_8ggwl")
+region_enabled = true
+region_rect = Rect2(170, 153, 16, 16)
+
+[node name="AttackShape" type="Area2D" parent="weapon_0"]
+collision_layer = 8
+collision_mask = 6
+script = ExtResource("3_ccd7q")
+metadata/_custom_type_script = "uid://cqpcts48j3vgs"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="weapon_0/AttackShape"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_sf7ju")

@@ -3,7 +3,7 @@ class_name Enemy
 
 var ACCELRATION : float = 2000
 var MAX_SPEED : float = 50
-var MAX_HEALTH : int = 1000
+var MAX_HEALTH : int = 100
 
 var player: Player
 var direction : Vector2
@@ -52,12 +52,10 @@ func check_knock(delta : float) -> void:
 	velocity = velocity.move_toward(MAX_SPEED * knock_dir, delta * knock_force)
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	var node = area.get_parent()
-	if(node.is_in_group("weapon")):
-		if("current_damage" in node):
-			current_health -= node.current_damage
-			if(node.has_method("check_penetrate")):
-				node.check_penetrate()
-	if(node.is_in_group("enemy")):
-		if(node.velocity.dot(self.velocity) < -0.8):
-			node.knock_back(velocity.length() / MAX_SPEED * 2800, direction)
+	if("current_damage" in area):
+		current_health -= area.current_damage
+		if(area.has_method("check_penetrate")):
+			area.check_penetrate()
+	#if(node.is_in_group("enemy")):
+		#if(node.velocity.dot(self.velocity) < -0.1):
+			#node.knock_back(velocity.length() / MAX_SPEED * 2800, direction)

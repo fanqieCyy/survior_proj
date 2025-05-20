@@ -5,7 +5,6 @@ const DROPPER = preload("res://scenes/dropper.tscn")
 var dropper_possibility := 50
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	push_error(0)
 	if(area.get_parent().is_in_group("weapon")):
 		generate_dropper(1, area)
 

@@ -18,4 +18,4 @@ func _on_interact_area_area_entered(area: Area2D) -> void:
 	var node = area.get_parent()
 	if(node.is_in_group("enemy")):
 		node.knock_back((velocity.length() / MAXSPEED) * 3500.0, direction)
-		print((velocity.length() / MAXSPEED) * 3500.0, " " ,last_direction)
+		#print((velocity.length() / MAXSPEED) * 3500.0, " " ,last_direction)

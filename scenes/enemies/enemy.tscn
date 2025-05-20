@@ -12,8 +12,6 @@ size = Vector2(20, 14)
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 7
-motion_mode = 1
-safe_margin = 0.2
 script = ExtResource("1_8e3ao")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
